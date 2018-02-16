@@ -1,6 +1,6 @@
 {
     "name": "rfi_adaptive",
-    "cssFiles": [ "bootstrap.min.css", "theme.css", "style.css" ],
+    "cssFiles": [ "bootstrap.min.css", "theme.css?1516286604" ],
     "jsFiles" : [ "bootstrap.min.js",
                   "jquery.mask.min.js",
                   "page_modifications.js"
