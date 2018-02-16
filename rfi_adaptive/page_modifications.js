@@ -2,30 +2,60 @@ $(document).ready(function () {
 	if (typeof SPG_FORM_ADAPTIVE === 'undefined' || !SPG_FORM_ADAPTIVE) {
 		  return
 	}
-	var tmp;
-	// add dropdown list
-	// month
-	tmp = '<select id="sel_month" class="dropdown"><option style="display:none;"></option><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option>\
-		<option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option></select>'
-	$('#PayForm_exp_month').before(tmp);
-	// Year
-	tmp = new Date().getFullYear();
-	tmp = parseInt(tmp.toString().substr(2));
-	tmp = '<select id="sel_year" class="dropdown"><option style="display:none;"></option><option>'+tmp+'</option><option>'+(tmp+1)+'</option><option>'+(tmp+2)+'</option><option>'+(tmp+3)+'</option>\
-		<option>'+(tmp+4)+'</option><option>'+(tmp+5)+'</option><option>'+(tmp+6)+'</option><option>'+(tmp+7)+'</option><option>'+(tmp+8)+'</option><option>'+(tmp+9)+'</option></select>'
-	$('#PayForm_exp_year').before(tmp);
-	// hide select
-	$('.dropdown').fadeTo(0,0).css('cursor', 'pointer');
+	var logo = $(".footer .cert-logo");
+	logo.removeClass("visible-lg-block").removeClass("visible-md-block");
+	logo.html(' \
+					<div class="cert-logo-icon" id="mastercard-mono"></div> \
+					<div class="cert-logo-icon" id="mastercard-securecode-mono"></div> \
+					<div class="cert-logo-icon" id="maestro-mono"></div> \
+          <div class="cert-logo-icon" id="visa-mono"></div> \
+          <div class="cert-logo-icon" id="mir-mono"></div> \
+          <div class="cert-logo-icon" id="pcidss-mono"></div> \
+					<div class="cert-logo-icon" id="thawte-mono"></div> \
+					');
 
-	// events
-	$('#sel_month').on('change focusout', function(){
-		$('#PayForm_exp_month').val($(this).find(':selected').text()).focus();
-		$('#sel_year').focus();
-	});
+	var cvcField = $('#PayForm_cvc2');
+	cvcField.after('<div id="toggle-icon" class="eye-icon"></div>');
 
-	$('#sel_year').on('change focusout', function(){
-		$('#PayForm_exp_year').val($(this).find(':selected').text()).focus();
-		$('#PayForm_card_holder').focus();
-	});
+	var toggleIcon = $('.textinput #toggle-icon');
+	var cvcFieldType = "number";
+	try {
+		if (window.matchMedia('(min-width: 992px)').matches) {
+			cvcFieldType = "password";
+		} else {
+			cvcFieldType = "number";
+			toggleIcon.removeClass("eye-icon").addClass("eye-blocked-icon");
+		}
+	} catch (error) {
+		console.error(error);
+	}
+
+	cvcField.prop("type", cvcFieldType);
+	cvcField.prop("pattern", "[0-9]*");
+	cvcField.prop("inputmode", "numeric");
+
+	toggleIcon.on('click', function(e) {
+		var type = cvcField.prop("type");
+		if (type === "password") {
+			e.target.className = "eye-blocked-icon";
+			cvcField.prop("type", "number");
+		} else {
+			e.target.className = "eye-icon";
+			cvcField.prop("type", "password");
+		}
+	})
+
+	var cardField = $('#PayForm_card');
+	cardField.prop("inputmode", "numeric");
+
+	var monthField = $('#PayForm_exp_month');
+	monthField.prop("type", "number");
+	monthField.prop("pattern", "[0-9]*");
+	monthField.prop("inputmode", "numeric");
+	
+	var yearField = $('#PayForm_exp_year');
+	yearField.prop("type", "number");
+	yearField.prop("pattern", "[0-9]*");
+	yearField.prop("inputmode", "numeric");
 
 });
