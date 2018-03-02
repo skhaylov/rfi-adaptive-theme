@@ -54,7 +54,7 @@ header .logo a {
 }
 
 .invoice-line p {
-	margin: 0px;
+	margin: 0;
 }
 
 .invoice-line .invoice-info {
@@ -88,7 +88,7 @@ header .logo a {
 }
 
 .textinput {
-	padding: 0px;
+	padding: 0;
 }
 
 .card_block > div > div > .textinput.col-xs-4:first-child {
@@ -119,20 +119,20 @@ header .logo a {
 
 .input-card {
 	padding: 5px 15px 5px 40px;
-	background: #fff url('credit-card-2x.png') no-repeat left 8px top 9px;
+	background: #fff url('../img/credit-card-2x.png') no-repeat left 8px top 9px;
 	margin-top: 0;
 	background-size: 25px;
 }
 
 .input-exp_month, .input-exp_year {
 	padding: 5px 5px 5px 30px;
-	background: #fff url('calendar-2x.png') no-repeat left 6px top 13px;
+	background: #fff url('../img/calendar-2x.png') no-repeat left 6px top 13px;
 	background-size: 18px;
 }
 
 .input-cvc2 {
 	padding: 5px 25px 5px 30px;
-	background: #fff url('lock-2x.png') no-repeat left 6px top 10px;
+	background: #fff url('../img/lock-2x.png') no-repeat left 6px top 10px;
 	background-size: 21px 21px;
 }
 
@@ -147,22 +147,20 @@ header .logo a {
 .eye-icon {
 	width: 16px;
 	height: 16px;
-	background: url('eye-2x.png') no-repeat;
-	background-position: 5px;
+	background: url('../img/eye-2x.png') no-repeat 5px;
 	background-size: 16px;
 }
 
 .eye-blocked-icon {
 	width: 16px;
 	height: 16px;
-	background: url('eye-blocked-2x.png') no-repeat;
-	background-position: 5px;
+	background: url('../img/eye-blocked-2x.png') no-repeat 5px;
 	background-size: 16px;
 }
 
 .input-card_holder {
 	padding: 5px 5px 5px 30px;
-	background: #fff url('person-2x.png') no-repeat left 10px top 12px;
+	background: #fff url('../img/person-2x.png') no-repeat left 10px top 12px;
 	background-size: 14px;
 }
 
@@ -170,7 +168,7 @@ header .logo a {
 	display: block;
 	text-align: left;
 	font-size: 12px;
-	margin: 0px 0px 0px 8px;
+	margin: 0 0 0 8px;
 	color: #b9b9b9;
 }
 
@@ -209,31 +207,30 @@ header .logo a {
 	margin: 7px;
 	width: 83px;
 	height: 33px;
-	background-repeat: no-repeat;
-	background-position: 50% 0;
+	background: no-repeat 50% 0;
 	background-size: contain;
 }
 
 .footer .cert-logo .cert-logo-icon#mastercard-mono {
-	background-image: url("mastercard-mono.png");
+	background-image: url("../img/mastercard-mono.png");
 }
 .footer .cert-logo .cert-logo-icon#mastercard-securecode-mono {
-	background-image: url("mastercard-securecode-mono.png");
+	background-image: url("../img/mastercard-securecode-mono.png");
 }
 .footer .cert-logo .cert-logo-icon#maestro-mono {
-	background-image: url("maestro-mono.png");
+	background-image: url("../img/maestro-mono.png");
 }
 .footer .cert-logo .cert-logo-icon#visa-mono {
-	background-image: url("visa-mono.png");
+	background-image: url("../img/visa-mono.png");
 }
 .footer .cert-logo .cert-logo-icon#mir-mono {
-	background-image: url("mir-mono.png");
+	background-image: url("../img/mir-mono.png");
 }
 .footer .cert-logo .cert-logo-icon#pcidss-mono {
-	background-image: url("pcidss-mono.png");
+	background-image: url("../img/pcidss-mono.png");
 }
 .footer .cert-logo .cert-logo-icon#thawte-mono {
-	background-image: url("thawte-mono.png");
+	background-image: url("../img/thawte-mono.png");
 }
 
 @media (min-width: 768px) {
@@ -257,17 +254,17 @@ header .logo a {
 @media (min-width: 992px) {
 
 	header .info {
-    margin-top: 4px;
-    padding-left: 50px;
-    padding-top: 13px;
-    background: url('ico_operator.png') no-repeat left top 10px;
-    height: 54px;
+		margin-top: 4px;
+		padding-left: 50px;
+		padding-top: 13px;
+		background: url('../img/ico_operator.png') no-repeat left top 10px;
+		height: 54px;
 	}
 
 	header .info .supportlink {
-    font-size: 15px;
-    color: #f84d5d;
-    text-decoration: underline;
+		font-size: 15px;
+		color: #f84d5d;
+		text-decoration: underline;
 	}
 
 	header .logo {
@@ -275,9 +272,9 @@ header .logo a {
 	}
 
 	.supportlink-container {
-    display: inline-block;
-    line-height: 42px;
-    height: 42px;
+		display: inline-block;
+		line-height: 42px;
+	    height: 42px;
 	}
 
 	.pay_big {
@@ -285,15 +282,15 @@ header .logo a {
 		font-size: 26px;
 	}
 	.pay_small {
-    display: none;
+    	display: none;
 	}
 	.card_block {
 		position: relative;
-    float: none;
-    width: 790px;
-    height: 320px;
-    padding: 25px 15px;
-    background: url('card_bg.png') no-repeat left top;
+		float: none;
+		width: 790px;
+		height: 320px;
+		padding: 25px 15px;
+		background: url('../img/card_bg.png') no-repeat left top;
 	}
 
 	.textinput {
@@ -301,13 +298,13 @@ header .logo a {
 	}
 
 	.input-help {
-    color: #4c4c4c;
+    	color: #4c4c4c;
 	}
 
 	.cart_cvc2 {
-    position: absolute;
-    top: 143px;
-    left: 445px;
+		position: absolute;
+		top: 143px;
+		left: 445px;
 	}
 	.card_block > div > div > .textinput.col-md-6:nth-of-type(-n+2) {
 		width: 48%;
@@ -317,9 +314,9 @@ header .logo a {
 		margin-left: 4%;
 	}
 	.card_block_submit {
-    float: none;
-    width: 40%;
-    margin: 0 auto;
+		float: none;
+		width: 40%;
+		margin: 0 auto;
 	}
 
 	.footer {

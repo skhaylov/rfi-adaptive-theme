@@ -1,9 +1,9 @@
 {
     "name": "rfi_adaptive",
-    "cssFiles": [ "bootstrap.min.css", "theme.css?1516286604" ],
-    "jsFiles" : [ "bootstrap.min.js",
-                  "jquery.mask.min.js",
-                  "page_modifications.js"
+    "cssFiles": [ "css/bootstrap.min.css", "css/theme.css?1516286604" ],
+    "jsFiles" : [ "js/bootstrap.min.js",
+                  "js/jquery.mask.min.js",
+                  "js/page_modifications.js"
                 ],
     "languageSwitcherStyle": "dropdown",
     "cvcRcSwitcherStyle": null,
